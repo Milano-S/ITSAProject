@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="WeatherApp.MainPage"
+             >
+
+    <StackLayout x:Name="bgGradient">
+        <StackLayout.Background>
+            <LinearGradientBrush StartPoint="1,0" EndPoint="1,1">
+                <GradientStop Color="#122259" Offset="0.0"/>
+                <GradientStop Color="#9561a1" Offset="0.5"/>
+            </LinearGradientBrush>
+        </StackLayout.Background>
+        <Label Text="Cape Town" FontSize="34"  HorizontalOptions="Center" Margin="0,25,0,0" TextColor="White"/>
+        <Label x:Name="tvConditions" Text="Clear Sky" FontSize="18"  HorizontalOptions="Center" Margin="0,17,0,0" TextColor="White"></Label>
+        <Label x:Name="tvTemp" Text="20.41°C" FontSize="48"  HorizontalOptions="Center" Margin="0,0,0,0" TextColor="White"></Label>
+        <Grid WidthRequest="10" HeightRequest="38" Padding="0,0,0,3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="tvPrecip" Text="Precipitation:" Margin="113,0,0,0" TextColor="White"/>
+            <Label x:Name="tvHumid" Text="Humidity:" HorizontalOptions="End" Margin="0,0,120,0" TextColor="White"/>
+        </Grid>
+        
+        <ListView Margin="10,0,10,7" x:Name="lvWeather" SeparatorColor="Black" VerticalOptions="FillAndExpand"
+                  RowHeight="60">
+            
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding datetime}"
+                                   FontSize="25"
+                                   Margin="10,10,10,10"
+                                   VerticalOptions="FillAndExpand"
+                                   TextColor="White"
+                                   />
+                            <Image Source="https://donations.childrenbelieve.ca/images/thumbs/0000912_clean-water_550.jpg"
+                                   HeightRequest="20"
+                                   WidthRequest="20"
+                                   />
+                            <Label Text="{Binding precip}"
+                                   VerticalOptions="Center"
+                                   TextColor="White"
+                                   />
+                            <Label Text="{Binding tempData}"
+                                   VerticalOptions="Center"
+                                   FontSize="20"
+                                   HorizontalOptions="EndAndExpand"
+                                   Margin="0,0,40,0"
+                                   TextColor="White"
+                                   />
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

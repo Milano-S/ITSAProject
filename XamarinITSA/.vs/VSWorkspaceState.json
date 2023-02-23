@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\WeatherApp",
+    "\\WeatherApp\\WeatherApp",
+    "\\WeatherApp\\WeatherApp\\WeatherApp",
+    "\\WeatherApp\\WeatherApp\\WeatherApp\\Model"
+  ],
+  "SelectedNode": "\\WeatherApp\\WeatherApp\\WeatherApp\\MainPage.xaml.cs",
+  "PreviewInSolutionExplorer": false
+}

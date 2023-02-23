@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\WeatherApiITSA.props" />
+</Project>
